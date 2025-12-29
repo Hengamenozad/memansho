@@ -3,4 +3,31 @@
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 15px;
+    min-width: 400px;
+    min-height: 600px;
+}
+.btn-white {
+    background-color: #ffff;
+    color: #000;
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 24px;
+    z-index: 2 !important;
+    width: fit-content;
+
+}
+.btn-container {
+    position: relative;
+}
+.btn-container::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 1px;
+    background-color: #ffff;
+    z-index: 1;
+
 }
