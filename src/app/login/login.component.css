@@ -6,6 +6,13 @@
     min-width: 400px;
     min-height: 600px;
 }
+.phone-input {
+    width: 260px;
+    height: 48px;
+    border-radius: 15px;
+    padding: 10px 14px;
+    font-size: 15px;
+  }
 .btn-white {
     background-color: #ffff;
     color: #000;
@@ -29,5 +36,18 @@
     height: 1px;
     background-color: #ffff;
     z-index: 1;
-
 }
+.btn-google {
+    background-color: #ffffff;
+    color: #000;
+    border-radius: 24px;
+    padding: 14px;
+    font-size: 13px;
+    font-weight: 480;
+    cursor: pointer;
+  }
+  
+  .btn-google:active {
+    transform: scale(0.97);
+  }
+  
