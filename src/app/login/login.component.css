@@ -45,6 +45,7 @@
     font-size: 13px;
     font-weight: 480;
     cursor: pointer;
+    transition: .2s all ease;
   }
   
   .btn-google:active {
