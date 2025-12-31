@@ -53,6 +53,26 @@
   }
 
   .otp-container {
-    display: flex;
+   display: flex ;
+   justify-content: center;
+   gap: 10px;
+   width: 100% ;
+   margin-top: 15px;
+   direction: ltr;
   }
   
+  .otp-input {
+    width: 42px ;
+    height: 42px ;
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 18px;
+  }
+
+  .timer {
+    margin-top: 14px;
+    font-size: 20px;
+    color: #d8950edd;
+    font-weight: 500;
+  }
