@@ -5,17 +5,25 @@
             <img src="assets/images/happy-outline.svg" alt="logo">
             <h2 class="fw-bold"> مهمان شو</h2>
 
-            <div class="d-flex flex-column align-items-center mt-4 w-100">
+            <div *ngIf="currentStep == 1" class="d-flex flex-column align-items-center mt-4 w-100">
                 <input type="text" class="form-control phone-input" placeholder="+98 0000000000"
                     [(ngModel)]="phoneNumber">
+            </div>
+            <div *ngIf="currentStep==2" class="d-flex text-center mb-2 otp-container "> 
+                <p-inputotp [(ngModel)]="value" [integerOnly]="true" />
+
             </div>
 
         </div>
         <button type="button" class="btn btn-main w-100" (click)="login()">ورود</button>
+        <p-colorpicker [(ngModel)]="color" />
+
         <div class="btn-container d-flex justify-content-center my-4 text-center w-100">
             <div class="btn-white" (click)="orAction()"> یا </div>
         </div>
         <button class="btn btn-google w-100 d-flex align-items-center justify-content-center ">
             <img src="assets/images/googleicon.svg" class="mr-2" alt="google">ورود با گوگل</button>
+
+
     </div>
 </div>
