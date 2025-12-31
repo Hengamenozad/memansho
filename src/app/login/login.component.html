@@ -9,14 +9,16 @@
                 <input type="text" class="form-control phone-input" placeholder="+98 0000000000"
                     [(ngModel)]="phoneNumber">
             </div>
-            <div *ngIf="currentStep==2" class="d-flex text-center mb-2 otp-container "> 
-                <p-inputotp [(ngModel)]="value" [integerOnly]="true" />
-
+            <div *ngIf="currentStep == 2" class="d-flex justify-content-center align-items-center mb-2 otp-container">
+                <input type="text" maxlength="1" class="otp-input" />
+                <input type="text" maxlength="1" class="otp-input" />
+                <input type="text" maxlength="1" class="otp-input" />
+                <input type="text" maxlength="1" class="otp-input" />
             </div>
+            <div class="timer mb-3">00:30</div>
 
         </div>
         <button type="button" class="btn btn-main w-100" (click)="login()">ورود</button>
-        <p-colorpicker [(ngModel)]="color" />
 
         <div class="btn-container d-flex justify-content-center my-4 text-center w-100">
             <div class="btn-white" (click)="orAction()"> یا </div>
