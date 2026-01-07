@@ -1,12 +1,12 @@
-<div class="login-bg vh-100 d-flex align-items-center justify-content-center">
-    <div class="login-card p-4 text-center shadow-lg text-white">
-        <div class="mb-5">
+<div class="login-bg vh-100 d-flex align-items-center justify-content-center w-100">
+    <div class="login-card d-flex flex-column align-items-center justify-content-center shadow-lg text-white p-3">
+        <div class="mb-5 col-12 text-center p-0">
             <div class="display-4 mb-2"></div>
             <img src="assets/images/happy-outline.svg" alt="logo">
             <h2 class="fw-bold"> مهمان شو</h2>
 
             <div *ngIf="currentStep == 1" class="d-flex flex-column align-items-center mt-4 w-100">
-                <input type="text" class="form-control phone-input" placeholder="+98 0000000000"
+                <input type="text" class="form-control phone-input w-100" placeholder="+98 0000000000"
                     [(ngModel)]="phoneNumber">
             </div>
             <div *ngIf="currentStep == 2" class="d-flex justify-content-center align-items-center mb-2 otp-container">
@@ -15,10 +15,12 @@
                 <input type="text" maxlength="1" class="otp-input" />
                 <input type="text" maxlength="1" class="otp-input" />
             </div>
-            <div class="timer mb-3">00:30</div>
+            <div *ngIf="currentStep == 2" class="timer mb-3">00:{{remainingTime}}</div>
+
 
         </div>
-        <button type="button" class="btn btn-main w-100" (click)="login()">ورود</button>
+        <button *ngIf="currentStep == 1" type="button" class="btn btn-main col-12" (click)="sendOtp()">ورود</button>
+        <button *ngIf="currentStep == 2" type="button" class="btn btn-light border-24 col-12" (click)="login()">ورود</button>
 
         <div class="btn-container d-flex justify-content-center my-4 text-center w-100">
             <div class="btn-white" (click)="orAction()"> یا </div>

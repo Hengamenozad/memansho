@@ -7,8 +7,6 @@
     min-height: 600px;
 }
 .phone-input {
-    width: 260px;
-    height: 48px;
     border-radius: 15px;
     padding: 10px 14px;
     font-size: 15px;
@@ -16,7 +14,6 @@
 .btn-white {
     background-color: #ffff;
     color: #000;
-    border: 1px solid;
     padding: 10px;
     border-radius: 24px;
     z-index: 2 !important;
@@ -75,4 +72,8 @@
     font-size: 20px;
     color: #d8950edd;
     font-weight: 500;
+  }
+
+  .border-24{
+    border-radius: 24px;
   }

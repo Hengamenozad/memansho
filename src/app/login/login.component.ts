@@ -15,18 +15,32 @@ import { ColorPickerModule } from 'primeng/colorpicker';
 
 export class LoginComponent {
   currentStep: any ;
-  phoneNumber: string = '';
+  phoneNumber: any = '';
   value: any = '' ;
   color : any = '';
+  remainingTime : any;
   ngOnInit() {
-    this.currentStep = 2;
+    this.currentStep = 1;
+    this.remainingTime = 30;
     
   }
   login() {
   }
   orAction() {
-
   }
+  sendOtp() {
+    if (this.phoneNumber.length == 11) {
+      
+      this.currentStep = 2;
+      setInterval(() => {
+        if (this.remainingTime > 0 ) {
+          this.remainingTime--;
+        } 
+      }, 1000);
+    }
+    else {alert('شماره اشتباه وارد شده است!')}
+  }
+
 
 }
 
